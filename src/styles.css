@@ -1,1 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* BEGIN a11y techniques */
+
+*:focus {
+    box-shadow: 0 0 0 1px white, 0 0 0 3px black, 0 0 0 4px white;
+    z-index: 1;
+    outline:none;
+}
+
+[aria-hidden="true"] { opacity: 0.5; }
+
+
+.offscreenText {
+position: absolute;
+clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+clip: rect(1px, 1px, 1px, 1px);
+clip-path: inset(50%);
+padding: 0;
+border: 0;
+height: 1px; 
+width: 1px; 
+overflow: hidden;
+white-space: nowrap;
+}
+
+/* END a11y techniques */
+
+header { background: #3f51b5; color:#fff; padding:20px; }
+header nav li { display:inline-block; margin-right:20px;  }
+header nav a {color: #fff; font-size:1.5rem; }
+h1 { width:20%; }
+h2 { width:15%; }
+#content { padding:50px; }
+
+/* BEGIN Modal */
+.a11y-modal {
+  padding:20px;
+  display:block;
+  position: fixed;
+  top:50px;
+  left: 0;
+  right: 0;
+  margin:auto;
+  background-color: #000;
+  color:#fff;
+  height:70%;
+  width: 55%;
+  border-radius: 2px;
+}
+/* END Modal */
+
+/* BEGIN Accordion and Reverse Accordion */
+#accordion { width:500px; margin:50px auto; } 
+#accLink { text-decoration:none; display:block; width:40%; text-align:left; } 
+#insertionPoint, #insertionPointAbove { padding:5px; margin-top:10px; width:40%; background-color:beige; border-radius:10px; } 
+#insertionPointAbove { position:fixed; top:128px; }
+.icon { font-weight:bold; font-size:1.5rem; text-decoration:none; } 
+/* END Accordion and Reverse Accordion */
+
+/* BEGIN Tooltip  */
+#tooltip { 
+  padding:10px; 
+  width:500px; 
+  border-radius:10px;
+  border:5px solid #000; 
+  background-color:#fff; 
+  position:relative; 
+  top:-55px; 
+  left:330px; 
+  color:#000;
+}  
+#link { width:200px; }
+/* END Tooltip  */
+
+/* BEGIN Alert  */
+#alert { width:500px; margin:50px auto; } 
+#alertButton { display:block; margin-top:20px; } 
+#alertLiveRegion {
+    margin-top:10px; 
+    padding:20px; 
+    background-color:red; 
+    color:#fff; 
+    width:70%; 
+    border-radius:5px;
+    text-align:center;
+}
+/* END Alert  */
+
+/* BEGIN Listbox  */
+div[role="listbox"] { 
+  margin-top:10px;
+  height:800px; 
+  overflow:scroll;
+  width:500px;
+  padding:35px;
+  background-color:#fff;
+  color:#000; 
+}
+div[role="option"]{ 
+  margin-top:10px;
+  padding:10px;
+}
+/* END Listbox  */

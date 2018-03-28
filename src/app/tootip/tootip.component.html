@@ -1,0 +1,25 @@
+
+
+<h2 tabindex="-1" #componentHeading>Tooltip</h2>
+<p>Focus the following link to see the tooltip</p>
+<a 
+  id="link" 
+  (click)="mockNavigate($event)" 
+  (focus)="open()" 
+  (blur)="close()" 
+  (mouseover)="open()" 
+  (mouseout)="close()" 
+  href="#" 
+  aria-describedby="tooltip" 
+  (keyup.escape)="close()"
+>
+link with tooltip
+</a>
+<div 
+  id="tooltip" 
+  role="tooltip" 
+  *ngIf="show" 
+  [attr.aria-hidden]="ariaHidden"
+>
+lorem impsum dolar
+</div>

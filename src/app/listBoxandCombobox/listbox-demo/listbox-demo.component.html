@@ -1,0 +1,9 @@
+<h2 tabindex="-1" #componentHeading>{{componentTitle}}</h2>
+<button id="dialogButton" (click)="toggleExpanded()">toggle listbox</button>
+<app-listbox
+    [selectedId]="selectedId" 
+    *ngIf="expanded" 
+    (onListboxOptionSelected)="onListboxOptionSelected($event)"
+    (onListboxEscPressed)="onListboxEscPressed()"
+></app-listbox>
+

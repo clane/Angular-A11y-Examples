@@ -1,0 +1,17 @@
+
+<h2 tabindex="-1" #componentHeading>Accordion</h2>
+<p>Use the following link to toggle the appearance of the accordion's content. The content will appear directly below therefore no focus movement is required.</p>
+<button 
+    id="accLink" 
+    href="#" 
+    (click)="toggle()" 
+    aria-controls="insertionPoint" 
+    [attr.aria-expanded]="expanded"
+>
+<span class="icon">+</span> Accordion Button</button>
+<div id="insertionPoint" *ngIf="show">
+    <h3>Accordion Content</h3>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</div>
