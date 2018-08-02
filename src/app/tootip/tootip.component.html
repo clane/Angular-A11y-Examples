@@ -3,20 +3,6 @@
 <h2 tabindex="-1" #componentHeading>Tooltip</h2>
 <p>Focus the following link to see the tooltip</p>
 <a 
-  *ngIf="!show" 
-  id="link" 
-  (click)="mockNavigate($event)" 
-  (focus)="open()" 
-  (blur)="close()" 
-  (mouseover)="open()" 
-  (mouseout)="close()" 
-  href="#" 
-  (keyup.escape)="close()"
->
-link with tooltip
-</a>
-
-<a 
   *ngIf="show" 
   [attr.aria-describedby]="id"
   id="link" 
@@ -28,7 +14,21 @@ link with tooltip
   href="#" 
   (keyup.escape)="close()"
 >
-link with tooltip
+link with tooltip and with aria-describedby
+</a>
+
+<a 
+  *ngIf="!show" 
+  id="link" 
+  (click)="mockNavigate($event)" 
+  (focus)="open()" 
+  (blur)="close()" 
+  (mouseover)="open()" 
+  (mouseout)="close()" 
+  href="#" 
+  (keyup.escape)="close()"
+>
+link with tooltip and without aria-describedby
 </a>
 
 <div 
