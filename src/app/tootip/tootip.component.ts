@@ -10,6 +10,7 @@ export class TootipComponent implements OnInit {
 
   constructor(private titleService: Title) {}
   componentTitle = 'Tooltip';
+  id = 'tooltip';
 
   setTitle(newTitle:string) { this.titleService.setTitle(newTitle); }
   @ViewChild('componentHeading') elementToFocusOnInit;
