@@ -4,7 +4,6 @@
 <p>Focus the following link to see the tooltip</p>
 <a 
   href="#" 
-  *ngIf="show" 
   [attr.aria-describedby]="id"
   (click)="mockNavigate($event)" 
   (focus)="open()" 
@@ -13,21 +12,9 @@
   (mouseout)="close()" 
   (keyup.escape)="close()"
 >
-link with tooltip and with aria-describedby
+link with tooltip
 </a>
 
-<a 
-  href="#" 
-  *ngIf="!show" 
-  (click)="mockNavigate($event)" 
-  (focus)="open()" 
-  (blur)="close()" 
-  (mouseover)="open()" 
-  (mouseout)="close()" 
-  (keyup.escape)="close()"
->
-link with tooltip and without aria-describedby
-</a>
 
 <div 
   id="tooltip" 
