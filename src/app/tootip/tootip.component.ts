@@ -10,6 +10,7 @@ export class TootipComponent implements OnInit {
 
   constructor(private titleService: Title) {}
   componentTitle = 'Tooltip';
+	id = null;
  
 
   setTitle(newTitle:string) { this.titleService.setTitle(newTitle); }
@@ -23,12 +24,14 @@ export class TootipComponent implements OnInit {
       //show the tooltip
       this.show = true;
       this.ariaHidden = !this.show;
+			this.id = "tooltip";
   }
 
   close() {
       //hide the tooltip
       this.show = false;
       this.ariaHidden = !this.show;
+			this.id = null;
   }
 
   mockNavigate(e) {
