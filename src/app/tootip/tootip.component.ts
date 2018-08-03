@@ -16,21 +16,18 @@ export class TootipComponent implements OnInit {
   setTitle(newTitle:string) { this.titleService.setTitle(newTitle); }
   @ViewChild('componentHeading') elementToFocusOnInit;
 
-  show: boolean = false;
-  ariaHidden: boolean = !this.show;
+  show: boolean = null;
   //When show is true ariaHidden is false
   //bound with the attribute binding [attr.aria-hidden]="ariaHidden"
   open() {
       //show the tooltip
       this.show = true;
-      this.ariaHidden = !this.show;
 			this.id = "tooltip";
   }
 
   close() {
       //hide the tooltip
       this.show = false;
-      this.ariaHidden = !this.show;
 			this.id = null;
   }
 
